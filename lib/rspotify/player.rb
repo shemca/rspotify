@@ -34,7 +34,14 @@ module RSpotify
     def play_context(device_id = nil, uri)
       params = {"context_uri": uri}
       play(device_id, params)
+      puts params
     end
+
+    def play_contexter(device_id = nil, uri, track, position)
+      params = {"context_uri": uri, "offset": {"uri": track},"position_ms": position}
+      play(device_id, params)
+    end
+
 
     # Allow user to play a list of tracks.
     # If `device_id` is not passed, the currently active spotify app will be triggered

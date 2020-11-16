@@ -1,31 +1,58 @@
-# encoding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rspotify/version'
+# -*- encoding: utf-8 -*-
+# stub: rspotify 2.9.2 ruby lib
 
-Gem::Specification.new do |spec|
-  spec.name          = 'rspotify'
-  spec.version       = RSpotify::VERSION
-  spec.authors       = ['Guilherme Sad']
-  spec.email         = ['gorgulhoguilherme@gmail.com']
-  spec.summary       = %q{A ruby wrapper for the Spotify Web API}
-  spec.homepage      = 'http://rubygems.org/gems/rspotify'
-  spec.license       = 'MIT'
+Gem::Specification.new do |s|
+  s.name = "rspotify".freeze
+  s.version = "2.9.2"
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.test_files    = spec.files.grep(/^spec\//)
-  spec.require_paths = ['lib']
+  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib".freeze]
+  s.authors = ["Guilherme Sad".freeze]
+  s.date = "2020-11-15"
+  s.email = ["gorgulhoguilherme@gmail.com".freeze]
+  s.files = [".editorconfig".freeze, ".github/FUNDING.yml".freeze, ".gitignore".freeze, ".rspec".freeze, ".travis.yml".freeze, "Gemfile".freeze, "LICENSE.txt".freeze, "README.md".freeze, "Rakefile".freeze, "lib/rspotify.rb".freeze, "lib/rspotify/album.rb".freeze, "lib/rspotify/artist.rb".freeze, "lib/rspotify/audio_features.rb".freeze, "lib/rspotify/base.rb".freeze, "lib/rspotify/category.rb".freeze, "lib/rspotify/connection.rb".freeze, "lib/rspotify/device.rb".freeze, "lib/rspotify/oauth.rb".freeze, "lib/rspotify/player.rb".freeze, "lib/rspotify/playlist.rb".freeze, "lib/rspotify/recommendation_seed.rb".freeze, "lib/rspotify/recommendations.rb".freeze, "lib/rspotify/track.rb".freeze, "lib/rspotify/track_link.rb".freeze, "lib/rspotify/user.rb".freeze, "lib/rspotify/version.rb".freeze, "rspotify.gemspec".freeze, "spec/authentication_helper.rb".freeze, "spec/lib/rspotify/album_spec.rb".freeze, "spec/lib/rspotify/artist_spec.rb".freeze, "spec/lib/rspotify/audio_features_spec.rb".freeze, "spec/lib/rspotify/category_spec.rb".freeze, "spec/lib/rspotify/client_token_spec.rb".freeze, "spec/lib/rspotify/playlist_spec.rb".freeze, "spec/lib/rspotify/recommendations_spec.rb".freeze, "spec/lib/rspotify/track_spec.rb".freeze, "spec/lib/rspotify/user_spec.rb".freeze, "spec/lib/rspotify_spec.rb".freeze, "spec/spec_helper.rb".freeze, "spec/vcr_cassettes/album_find_2agWNCZl5Ts9W05mij8EPh.yml".freeze, "spec/vcr_cassettes/album_find_2agWNCZl5Ts9W05mij8EPh_market_ES.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX_tracks.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX_tracks_market_ES.yml".freeze, "spec/vcr_cassettes/album_find_3JquYMWj5wrzuZCNAvOYN9.yml".freeze, "spec/vcr_cassettes/album_find_5bU1XKYxHhEwukllT20xtk.yml".freeze, "spec/vcr_cassettes/album_find_5bU1XKYxHhEwukllT20xtk_market_ES.yml".freeze, "spec/vcr_cassettes/album_new_releases.yml".freeze, "spec/vcr_cassettes/album_new_releases_country_ES.yml".freeze, "spec/vcr_cassettes/album_new_releases_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/album_search_AM.yml".freeze, "spec/vcr_cassettes/album_search_AM_limit_10.yml".freeze, "spec/vcr_cassettes/album_search_AM_market_ES.yml".freeze, "spec/vcr_cassettes/album_search_AM_offset_10.yml".freeze, "spec/vcr_cassettes/album_search_AM_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_albums_limit_20_offset_0.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_related_artists.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_top_tracks_US.yml".freeze, "spec/vcr_cassettes/artist_find_0oSGxfWSnnOXhD2fKuz2Gy.yml".freeze, "spec/vcr_cassettes/artist_find_3dBVyJ7JuOMt4GE9607Qin.yml".freeze, "spec/vcr_cassettes/artist_find_7Ln80lUS6He07XvHI8qqHH.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_limit_10.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_market_ES.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_offset_10.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/audio_features_find_1zHlj4dQ8ZAtrayhuDDmkY.yml".freeze, "spec/vcr_cassettes/audio_features_find_multiple.yml".freeze, "spec/vcr_cassettes/authenticate_client.yml".freeze, "spec/vcr_cassettes/category_find_party.yml".freeze, "spec/vcr_cassettes/category_find_party_country_BR.yml".freeze, "spec/vcr_cassettes/category_find_party_locale_es_MX.yml".freeze, "spec/vcr_cassettes/category_list.yml".freeze, "spec/vcr_cassettes/category_list_country_BR.yml".freeze, "spec/vcr_cassettes/category_list_locale_es_MX_limit_10.yml".freeze, "spec/vcr_cassettes/category_party_playlists.yml".freeze, "spec/vcr_cassettes/category_party_playlists_country_BR.yml".freeze, "spec/vcr_cassettes/category_party_playlists_limit_10_offset_20.yml".freeze, "spec/vcr_cassettes/playlist_4dn0iEoAxn69ea0Tyov8V5_tracks_offset_100.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_country_ES_timestamp_2014-10-23T09_00_00.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_locale_es_MX.yml".freeze, "spec/vcr_cassettes/playlist_find_00wHcTN0zQiun4xri9pmvX_market_ES.yml".freeze, "spec/vcr_cassettes/playlist_find_118430647_starred.yml".freeze, "spec/vcr_cassettes/playlist_find_by_id_37i9dQZF1DX1R3yDogYrbo.yml".freeze, "spec/vcr_cassettes/playlist_find_by_id_4dn0iEoAxn69ea0Tyov8V5.yml".freeze, "spec/vcr_cassettes/playlist_find_spotify_4LO89Y0ydu8li9Phq2iwKT.yml".freeze, "spec/vcr_cassettes/playlist_find_wizzler_00wHcTN0zQiun4xri9pmvX.yml".freeze, "spec/vcr_cassettes/playlist_is_followed_by.yml".freeze, "spec/vcr_cassettes/playlist_search_Bird_limit_7.yml".freeze, "spec/vcr_cassettes/playlist_search_Caramell_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_offset_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_tracks_118430647_starred.yml".freeze, "spec/vcr_cassettes/recommendations_available_genre_seeds.yml".freeze, "spec/vcr_cassettes/recommendations_generate.yml".freeze, "spec/vcr_cassettes/track_audio_features_3jfr0TF6DQcOLat8gGn7E2.yml".freeze, "spec/vcr_cassettes/track_find_3jfr0TF6DQcOLat8gGn7E2.yml".freeze, "spec/vcr_cassettes/track_find_3jfr0TF6DQcOLat8gGn7E2_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_4oI9kesyxHUr8fqiLd6uO9.yml".freeze, "spec/vcr_cassettes/track_find_4oI9kesyxHUr8fqiLd6uO9_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_6fi8e1nv4QBqODf9puRcyX_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_7D8BAYkrR9peCB9XSKCADc.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_limit_10.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_market_ES.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_offset_10.yml".freeze, "spec/vcr_cassettes/user_find_spotify.yml".freeze, "spec/vcr_cassettes/user_find_wizzler.yml".freeze, "spec/vcr_cassettes/user_wizzler_playlists_limit_20_offset_0.yml".freeze]
+  s.homepage = "http://rubygems.org/gems/rspotify".freeze
+  s.licenses = ["MIT".freeze]
+  s.required_ruby_version = Gem::Requirement.new(">= 2.0.0".freeze)
+  s.rubygems_version = "3.0.8".freeze
+  s.summary = "A ruby wrapper for the Spotify Web API".freeze
+  s.test_files = ["spec/authentication_helper.rb".freeze, "spec/lib/rspotify/album_spec.rb".freeze, "spec/lib/rspotify/artist_spec.rb".freeze, "spec/lib/rspotify/audio_features_spec.rb".freeze, "spec/lib/rspotify/category_spec.rb".freeze, "spec/lib/rspotify/client_token_spec.rb".freeze, "spec/lib/rspotify/playlist_spec.rb".freeze, "spec/lib/rspotify/recommendations_spec.rb".freeze, "spec/lib/rspotify/track_spec.rb".freeze, "spec/lib/rspotify/user_spec.rb".freeze, "spec/lib/rspotify_spec.rb".freeze, "spec/spec_helper.rb".freeze, "spec/vcr_cassettes/album_find_2agWNCZl5Ts9W05mij8EPh.yml".freeze, "spec/vcr_cassettes/album_find_2agWNCZl5Ts9W05mij8EPh_market_ES.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX_tracks.yml".freeze, "spec/vcr_cassettes/album_find_2js3lkzAjWpD656NK7ZaJX_tracks_market_ES.yml".freeze, "spec/vcr_cassettes/album_find_3JquYMWj5wrzuZCNAvOYN9.yml".freeze, "spec/vcr_cassettes/album_find_5bU1XKYxHhEwukllT20xtk.yml".freeze, "spec/vcr_cassettes/album_find_5bU1XKYxHhEwukllT20xtk_market_ES.yml".freeze, "spec/vcr_cassettes/album_new_releases.yml".freeze, "spec/vcr_cassettes/album_new_releases_country_ES.yml".freeze, "spec/vcr_cassettes/album_new_releases_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/album_search_AM.yml".freeze, "spec/vcr_cassettes/album_search_AM_limit_10.yml".freeze, "spec/vcr_cassettes/album_search_AM_market_ES.yml".freeze, "spec/vcr_cassettes/album_search_AM_offset_10.yml".freeze, "spec/vcr_cassettes/album_search_AM_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_albums_limit_20_offset_0.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_related_artists.yml".freeze, "spec/vcr_cassettes/artist_7Ln80lUS6He07XvHI8qqHH_top_tracks_US.yml".freeze, "spec/vcr_cassettes/artist_find_0oSGxfWSnnOXhD2fKuz2Gy.yml".freeze, "spec/vcr_cassettes/artist_find_3dBVyJ7JuOMt4GE9607Qin.yml".freeze, "spec/vcr_cassettes/artist_find_7Ln80lUS6He07XvHI8qqHH.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_limit_10.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_market_ES.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_offset_10.yml".freeze, "spec/vcr_cassettes/artist_search_Arctic_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/audio_features_find_1zHlj4dQ8ZAtrayhuDDmkY.yml".freeze, "spec/vcr_cassettes/audio_features_find_multiple.yml".freeze, "spec/vcr_cassettes/authenticate_client.yml".freeze, "spec/vcr_cassettes/category_find_party.yml".freeze, "spec/vcr_cassettes/category_find_party_country_BR.yml".freeze, "spec/vcr_cassettes/category_find_party_locale_es_MX.yml".freeze, "spec/vcr_cassettes/category_list.yml".freeze, "spec/vcr_cassettes/category_list_country_BR.yml".freeze, "spec/vcr_cassettes/category_list_locale_es_MX_limit_10.yml".freeze, "spec/vcr_cassettes/category_party_playlists.yml".freeze, "spec/vcr_cassettes/category_party_playlists_country_BR.yml".freeze, "spec/vcr_cassettes/category_party_playlists_limit_10_offset_20.yml".freeze, "spec/vcr_cassettes/playlist_4dn0iEoAxn69ea0Tyov8V5_tracks_offset_100.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_country_ES_timestamp_2014-10-23T09_00_00.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/playlist_browse_featured_locale_es_MX.yml".freeze, "spec/vcr_cassettes/playlist_find_00wHcTN0zQiun4xri9pmvX_market_ES.yml".freeze, "spec/vcr_cassettes/playlist_find_118430647_starred.yml".freeze, "spec/vcr_cassettes/playlist_find_by_id_37i9dQZF1DX1R3yDogYrbo.yml".freeze, "spec/vcr_cassettes/playlist_find_by_id_4dn0iEoAxn69ea0Tyov8V5.yml".freeze, "spec/vcr_cassettes/playlist_find_spotify_4LO89Y0ydu8li9Phq2iwKT.yml".freeze, "spec/vcr_cassettes/playlist_find_wizzler_00wHcTN0zQiun4xri9pmvX.yml".freeze, "spec/vcr_cassettes/playlist_is_followed_by.yml".freeze, "spec/vcr_cassettes/playlist_search_Bird_limit_7.yml".freeze, "spec/vcr_cassettes/playlist_search_Caramell_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_offset_10.yml".freeze, "spec/vcr_cassettes/playlist_search_Indie_offset_10_limit_10.yml".freeze, "spec/vcr_cassettes/playlist_tracks_118430647_starred.yml".freeze, "spec/vcr_cassettes/recommendations_available_genre_seeds.yml".freeze, "spec/vcr_cassettes/recommendations_generate.yml".freeze, "spec/vcr_cassettes/track_audio_features_3jfr0TF6DQcOLat8gGn7E2.yml".freeze, "spec/vcr_cassettes/track_find_3jfr0TF6DQcOLat8gGn7E2.yml".freeze, "spec/vcr_cassettes/track_find_3jfr0TF6DQcOLat8gGn7E2_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_4oI9kesyxHUr8fqiLd6uO9.yml".freeze, "spec/vcr_cassettes/track_find_4oI9kesyxHUr8fqiLd6uO9_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_6fi8e1nv4QBqODf9puRcyX_market_ES.yml".freeze, "spec/vcr_cassettes/track_find_7D8BAYkrR9peCB9XSKCADc.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_limit_10.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_limit_10_offset_10.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_market_ES.yml".freeze, "spec/vcr_cassettes/track_search_Wanna_Know_offset_10.yml".freeze, "spec/vcr_cassettes/user_find_spotify.yml".freeze, "spec/vcr_cassettes/user_find_wizzler.yml".freeze, "spec/vcr_cassettes/user_wizzler_playlists_limit_20_offset_0.yml".freeze]
 
-  spec.add_dependency 'omniauth-oauth2', '~> 1.5.0'
-  spec.add_dependency 'rest-client', '~> 2.0.2'
-  spec.add_dependency 'addressable', '~> 2.5.2'
+  s.installed_by_version = "3.0.8" if s.respond_to? :installed_by_version
 
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'yard'
-  spec.add_development_dependency 'vcr', '~> 3.0'
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
 
-  spec.required_ruby_version = '>= 2.0.0'
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<omniauth-oauth2>.freeze, ["~> 1.5.0"])
+      s.add_runtime_dependency(%q<rest-client>.freeze, ["~> 2.0.2"])
+      s.add_runtime_dependency(%q<addressable>.freeze, ["~> 2.5.2"])
+      s.add_development_dependency(%q<bundler>.freeze, [">= 0"])
+      s.add_development_dependency(%q<webmock>.freeze, [">= 0"])
+      s.add_development_dependency(%q<rake>.freeze, [">= 0"])
+      s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
+      s.add_development_dependency(%q<yard>.freeze, [">= 0"])
+      s.add_development_dependency(%q<vcr>.freeze, ["~> 3.0"])
+    else
+      s.add_dependency(%q<omniauth-oauth2>.freeze, ["~> 1.5.0"])
+      s.add_dependency(%q<rest-client>.freeze, ["~> 2.0.2"])
+      s.add_dependency(%q<addressable>.freeze, ["~> 2.5.2"])
+      s.add_dependency(%q<bundler>.freeze, [">= 0"])
+      s.add_dependency(%q<webmock>.freeze, [">= 0"])
+      s.add_dependency(%q<rake>.freeze, [">= 0"])
+      s.add_dependency(%q<rspec>.freeze, [">= 0"])
+      s.add_dependency(%q<yard>.freeze, [">= 0"])
+      s.add_dependency(%q<vcr>.freeze, ["~> 3.0"])
+    end
+  else
+    s.add_dependency(%q<omniauth-oauth2>.freeze, ["~> 1.5.0"])
+    s.add_dependency(%q<rest-client>.freeze, ["~> 2.0.2"])
+    s.add_dependency(%q<addressable>.freeze, ["~> 2.5.2"])
+    s.add_dependency(%q<bundler>.freeze, [">= 0"])
+    s.add_dependency(%q<webmock>.freeze, [">= 0"])
+    s.add_dependency(%q<rake>.freeze, [">= 0"])
+    s.add_dependency(%q<rspec>.freeze, [">= 0"])
+    s.add_dependency(%q<yard>.freeze, [">= 0"])
+    s.add_dependency(%q<vcr>.freeze, ["~> 3.0"])
+  end
 end
